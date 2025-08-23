@@ -1,0 +1,8 @@
+{
+    "servers":{
+        "my-mcp-server": {
+            "url": "http://localhost:5000/mcp",
+            "headers": {}
+        }
+    }
+}

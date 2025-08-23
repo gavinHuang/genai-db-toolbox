@@ -1,0 +1,176 @@
+sources:
+    my-sqlite-db:
+        kind: sqlite
+        database: "/mnt/c/Users/Gavin/AppData/Roaming/DBeaverData/workspace6/.metadata/sample-database-sqlite-1/Chinook.db"
+
+tools:
+    execute_sql:
+        kind: sqlite-sql
+        source: my-sqlite-db
+        description: Execute arbitrary SQL statements against the SQLite database. Use this for INSERT, UPDATE, DELETE, CREATE TABLE, and other SQL operations.
+        statement: |
+            -- Replace this with your SQL statement
+            SELECT 'Replace this statement with your SQL';
+
+    list_tables:
+        kind: sqlite-sql
+        source: my-sqlite-db
+        description: List all tables in the SQLite database with their schema information
+        statement: |
+            SELECT 
+                name as table_name,
+                type as object_type,
+                sql as create_statement
+            FROM sqlite_master 
+            WHERE type = 'table' 
+            AND name NOT LIKE 'sqlite_%'
+            ORDER BY name;
+
+    describe_table:
+        kind: sqlite-sql
+        source: my-sqlite-db
+        description: Get detailed column information for a specific table
+        statement: PRAGMA table_info(?);
+        parameters:
+            - name: table_name
+              type: string
+              description: Name of the table to describe
+
+    search_users:
+        kind: sqlite-sql
+        source: my-sqlite-db
+        description: Search users by name and age criteria
+        statement: SELECT * FROM users WHERE name LIKE ? AND age >= ?;
+        parameters:
+            - name: name_pattern
+              type: string
+              description: Name pattern to search for (use % for wildcards)
+            - name: min_age
+              type: integer
+              description: Minimum age filter
+
+    count_records:
+        kind: sqlite-sql
+        source: my-sqlite-db
+        description: Count records in any table using template parameters
+        statement: SELECT COUNT(*) as record_count FROM {{.tableName}};
+        templateParameters:
+            - name: tableName
+              type: string
+              description: Name of the table to count records from
+
+    query_with_filter:
+        kind: sqlite-sql
+        source: my-sqlite-db
+        description: Query a table with dynamic column filtering using template parameters
+        statement: |
+            SELECT * FROM {{.tableName}} 
+            WHERE {{.columnName}} = ?
+            ORDER BY {{.orderBy}} 
+            LIMIT ?;
+        templateParameters:
+            - name: tableName
+              type: string
+              description: Name of the table to query
+            - name: columnName
+              type: string
+              description: Column name for filtering
+            - name: orderBy
+              type: string
+              description: Column name for ordering results
+        parameters:
+            - name: filter_value
+              type: string
+              description: Value to filter by
+            - name: limit
+              type: integer
+              description: Maximum number of records to return
+              default: 100
+
+    insert_record:
+        kind: sqlite-sql
+        source: my-sqlite-db
+        description: Insert a new record into a specified table with individual parameter values
+        statement: INSERT INTO {{.tableName}} ({{.columns}}) VALUES ({{.placeholders}});
+        templateParameters:
+            - name: tableName
+              type: string
+              description: Name of the table to insert into
+            - name: columns
+              type: string
+              description: Comma-separated list of column names (e.g., "name, age, email")
+            - name: placeholders
+              type: string
+              description: Comma-separated list of ? placeholders matching the number of columns (e.g., "?, ?, ?")
+        parameters:
+            - name: value1
+              type: string
+              description: First value to insert
+              required: false
+            - name: value2
+              type: string
+              description: Second value to insert
+              required: false
+            - name: value3
+              type: string
+              description: Third value to insert
+              required: false
+
+    insert_user:
+        kind: sqlite-sql
+        source: my-sqlite-db
+        description: Insert a new user record with specific fields
+        statement: INSERT INTO users (name, age, email) VALUES (?, ?, ?);
+        parameters:
+            - name: name
+              type: string
+              description: User's full name
+            - name: age
+              type: integer
+              description: User's age
+            - name: email
+              type: string
+              description: User's email address
+
+    database_info:
+        kind: sqlite-sql
+        source: my-sqlite-db
+        description: Get SQLite database information and statistics
+        statement: |
+            SELECT 
+                'database_version' as info_type,
+                sqlite_version() as value
+            UNION ALL
+            SELECT 
+                'page_size' as info_type,
+                CAST(page_size as TEXT) as value
+            FROM pragma_page_size()
+            UNION ALL
+            SELECT 
+                'page_count' as info_type,
+                CAST(page_count as TEXT) as value
+            FROM pragma_page_count()
+            UNION ALL
+            SELECT 
+                'database_size_bytes' as info_type,
+                CAST((page_count * page_size) as TEXT) as value
+            FROM pragma_page_count(), pragma_page_size();
+
+toolsets:
+    sqlite-basic-tools:
+        - execute_sql
+        - list_tables
+        - describe_table
+        - database_info
+    
+    sqlite-query-tools:
+        - search_users
+        - count_records
+        - query_with_filter
+    
+    sqlite-admin-tools:
+        - insert_user
+        - insert_record
+        - database_info
+        - list_tables
+        - describe_table

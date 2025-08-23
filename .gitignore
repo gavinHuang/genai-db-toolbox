@@ -1,0 +1,71 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+*.py[cod]
+*$py.class
+build/
+dist/
+wheels/
+*.egg-info
+*.egg
+MANIFEST
+
+# Virtual environments
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# UV specific
+.python-version
+
+# IDE and Editor files
+.idea/
+*.swp
+*.swo
+*~
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# Logs and databases
+*.log
+*.sqlite
+*.sqlite3
+logs/
+
+# GenAI Toolbox specific
+toolbox
+database_schema.json
+
+# API keys and secrets
+.env
+.env.local
+.env.production
+secrets.json
+config.local.json
+
+# Model Context Protocol
+mcp-server.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# Test and coverage reports
+.coverage
+.pytest_cache/
+htmlcov/
+.tox/
+coverage.xml
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
