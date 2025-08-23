@@ -1,0 +1,56 @@
+Measures:
+Table: Backorder Percentage
+Name: % on backorder
+DAX: AVERAGE('Backorder Percentage'[Backorder %])
+---
+Table: Backorder Percentage
+Name: Backorder $
+DAX: sum('Backorder Percentage'[Backorder %]) * 10000
+---
+Table: Backorder Percentage
+Name: Product Availability
+DAX: AVERAGE('Backorder Percentage'[Backorder %]) * 15
+---
+Table: Backorder Percentage
+Name: % on time orders
+DAX: AVERAGE('Backorder Percentage'[Backorder %])
+---
+
+Calculated Columns:
+Table: DateTableTemplate_6de7953b-39de-41ab-b96b-cebbc3f3ccc1
+Name: Year
+DAX: YEAR([Date])
+---
+Table: DateTableTemplate_6de7953b-39de-41ab-b96b-cebbc3f3ccc1
+Name: MonthNo
+DAX: MONTH([Date])
+---
+Table: DateTableTemplate_6de7953b-39de-41ab-b96b-cebbc3f3ccc1
+Name: Month
+DAX: FORMAT([Date], "MMMM")
+---
+Table: DateTableTemplate_6de7953b-39de-41ab-b96b-cebbc3f3ccc1
+Name: QuarterNo
+DAX: INT(([MonthNo] + 2) / 3)
+---
+Table: DateTableTemplate_6de7953b-39de-41ab-b96b-cebbc3f3ccc1
+Name: Quarter
+DAX: "Qtr " & [QuarterNo]
+---
+Table: DateTableTemplate_6de7953b-39de-41ab-b96b-cebbc3f3ccc1
+Name: Day
+DAX: DAY([Date])
+---
+Table: Supply Analytics
+Name: Manufactured (%)
+DAX: If('Supply Analytics'[Manufactured Goods %] <=0.9, ">125%", if('Supply Analytics'[Manufactured Goods %] >0.9 && [Manufactured Goods %] <= 1.2, "Between 100%-125%", if('Supply Analytics'[Manufactured Goods %] > 1.2 && [Manufactured Goods %] <= 1.2, "Between 75%-100%", "<75%")))
+---
+Table: Supply Analytics
+Name: Manufactured Goods
+DAX: If('Supply Analytics'[Manufactured Goods %] <=1.1, ">100%", "<70%")
+---
+
+Calculated Tables:
+Table: DateTableTemplate_6de7953b-39de-41ab-b96b-cebbc3f3ccc1
+DAX: Calendar(Date(2015,1,1), Date(2015,1,1))
+---
