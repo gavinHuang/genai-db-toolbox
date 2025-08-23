@@ -1,3 +1,73 @@
+
+Tables and Columns:
+Table: Backorder Percentage (Data Table)
+  - Month (Text)
+  - Region (Text)
+  - Plant (Text)
+  - Product Type (Text)
+  - Forecast Bias (Text)
+  - Buyer Type (Text)
+  - Shipment Destination (Text)
+  - Shipment Type (Text)
+  - Product ID (Text)
+  - Forecast Accuracy (Text)
+  - Brand (Text)
+  - Backorder % (Number)
+  - Distribution Center (Text)
+  - Demand Type (Text)
+  Data: 100 rows extracted (Total: 246 rows)
+---
+Table: DateTableTemplate_6de7953b-39de-41ab-b96b-cebbc3f3ccc1 (Data Table)
+  - Year (Number)
+  - MonthNo (Number)
+  - Month (Text)
+  - QuarterNo (Number)
+  - Quarter (Text)
+  - Day (Number)
+  Data: 1 rows extracted (Total: 1 rows)
+---
+Table: Explanations (Data Table)
+  - Product ID (int64)
+  - Location (Text)
+  - Factor (Text)
+  - Risk (int64)
+  Data: 24 rows extracted (Total: 24 rows)
+---
+Table: Logo (Data Table)
+  - URL (Text)
+  Data: 1 rows extracted (Total: 1 rows)
+---
+Table: Month (Data Table)
+  - ID (int64)
+  - Month (Text)
+  Data: 12 rows extracted (Total: 12 rows)
+---
+Table: Risk (Data Table)
+  - Product ID (int64)
+  - Location (Text)
+  - Risk Score (Text)
+  - Backorder Risk (int64)
+  - Distribution Center (Text)
+  Data: 100 rows extracted (Total: 52268 rows)
+---
+Table: Supply Analytics (Data Table)
+  - Manufactured Goods % (Number)
+  - Forecast Accuracy (Text)
+  - Forecast Bias (Text)
+  - Product Advertised (Text)
+  - Multiple Retailers (Text)
+  - Day Contacted (int64)
+  - Product  (Text)
+  - Manufactured (%) (Text)
+  - Inventory Levels (Text)
+  - Manufactured Goods (Text)
+  - Demand Type (Text)
+  - Manufactured Goods (%) (Text)
+  - Type (Text)
+  - Plant (Text)
+  Data: 100 rows extracted (Total: 45222 rows)
+---
+
 Measures:
 Table: Backorder Percentage
 Name: % on backorder

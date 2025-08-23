@@ -1,0 +1,251 @@
+{
+  "tables": [
+    {
+      "name": "Backorder Percentage",
+      "columns": [
+        {
+          "name": "Month",
+          "type": "string"
+        },
+        {
+          "name": "Region",
+          "type": "string"
+        },
+        {
+          "name": "Plant",
+          "type": "string"
+        },
+        {
+          "name": "Product Type",
+          "type": "string"
+        },
+        {
+          "name": "Forecast Bias",
+          "type": "string"
+        },
+        {
+          "name": "Buyer Type",
+          "type": "string"
+        },
+        {
+          "name": "Shipment Destination",
+          "type": "string"
+        },
+        {
+          "name": "Shipment Type",
+          "type": "string"
+        },
+        {
+          "name": "Product ID",
+          "type": "string"
+        },
+        {
+          "name": "Forecast Accuracy",
+          "type": "string"
+        },
+        {
+          "name": "Brand",
+          "type": "string"
+        },
+        {
+          "name": "Backorder %",
+          "type": "Float64"
+        },
+        {
+          "name": "Distribution Center",
+          "type": "string"
+        },
+        {
+          "name": "Demand Type",
+          "type": "string"
+        }
+      ],
+      "row_count": 246,
+      "data_extracted": true
+    },
+    {
+      "name": "DateTableTemplate_6de7953b-39de-41ab-b96b-cebbc3f3ccc1",
+      "columns": [
+        {
+          "name": "Year",
+          "type": "object"
+        },
+        {
+          "name": "MonthNo",
+          "type": "object"
+        },
+        {
+          "name": "Month",
+          "type": "object"
+        },
+        {
+          "name": "QuarterNo",
+          "type": "object"
+        },
+        {
+          "name": "Quarter",
+          "type": "object"
+        },
+        {
+          "name": "Day",
+          "type": "object"
+        }
+      ],
+      "row_count": 1,
+      "data_extracted": true
+    },
+    {
+      "name": "Explanations",
+      "columns": [
+        {
+          "name": "Product ID",
+          "type": "Int64"
+        },
+        {
+          "name": "Location",
+          "type": "string"
+        },
+        {
+          "name": "Factor",
+          "type": "string"
+        },
+        {
+          "name": "Risk",
+          "type": "Int64"
+        }
+      ],
+      "row_count": 24,
+      "data_extracted": true
+    },
+    {
+      "name": "Logo",
+      "columns": [
+        {
+          "name": "URL",
+          "type": "string"
+        }
+      ],
+      "row_count": 1,
+      "data_extracted": true
+    },
+    {
+      "name": "Month",
+      "columns": [
+        {
+          "name": "ID",
+          "type": "Int64"
+        },
+        {
+          "name": "Month",
+          "type": "string"
+        }
+      ],
+      "row_count": 12,
+      "data_extracted": true
+    },
+    {
+      "name": "Risk",
+      "columns": [
+        {
+          "name": "Product ID",
+          "type": "Int64"
+        },
+        {
+          "name": "Location",
+          "type": "string"
+        },
+        {
+          "name": "Risk Score",
+          "type": "string"
+        },
+        {
+          "name": "Backorder Risk",
+          "type": "Int64"
+        },
+        {
+          "name": "Distribution Center",
+          "type": "string"
+        }
+      ],
+      "row_count": 52268,
+      "data_extracted": true
+    },
+    {
+      "name": "Supply Analytics",
+      "columns": [
+        {
+          "name": "Manufactured Goods %",
+          "type": "Float64"
+        },
+        {
+          "name": "Forecast Accuracy",
+          "type": "string"
+        },
+        {
+          "name": "Forecast Bias",
+          "type": "string"
+        },
+        {
+          "name": "Product Advertised",
+          "type": "string"
+        },
+        {
+          "name": "Multiple Retailers",
+          "type": "string"
+        },
+        {
+          "name": "Day Contacted",
+          "type": "Int64"
+        },
+        {
+          "name": "Product ",
+          "type": "string"
+        },
+        {
+          "name": "Manufactured (%)",
+          "type": "object"
+        },
+        {
+          "name": "Inventory Levels",
+          "type": "string"
+        },
+        {
+          "name": "Manufactured Goods",
+          "type": "object"
+        },
+        {
+          "name": "Demand Type",
+          "type": "string"
+        },
+        {
+          "name": "Manufactured Goods (%)",
+          "type": "string"
+        },
+        {
+          "name": "Type",
+          "type": "string"
+        },
+        {
+          "name": "Plant",
+          "type": "string"
+        }
+      ],
+      "row_count": 45222,
+      "data_extracted": true
+    }
+  ],
+  "relationships": [
+    {
+      "error": "'str' object has no attribute 'get'"
+    }
+  ],
+  "measures": [],
+  "calculated_columns": [],
+  "calculated_tables": [],
+  "power_query": "              TableName                                         Expression\n0      Supply Analytics  let\\n    Source = Excel.Workbook(File.Contents...\n1                  Risk  let\\n    Source = Excel.Workbook(AzureStorage....\n2          Explanations  let\\n    Source = Excel.Workbook(File.Contents...\n3                  Logo  let\\n    Source = Table.FromRows(Json.Document...\n4                 Month  let\\n    Source = Table.FromRows(Json.Document...\n5  Backorder Percentage  let\\n    Source = Excel.Workbook(File.Contents...",
+  "metadata": {
+    "version": "Unknown",
+    "size": 1522750,
+    "table_count": 7
+  }
+}

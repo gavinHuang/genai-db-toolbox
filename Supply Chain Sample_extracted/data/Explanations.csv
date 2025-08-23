@@ -1,0 +1,25 @@
+Product ID,Location,Factor,Risk
+10000006,USA,Inventory Level: Low,41
+10000006,USA,Forecast Accuracy: < 50%,35
+10000006,USA,Manufactured Goods: < 70%,23
+10000006,USA,Category: Low Value Stable,-4
+10000000,USA,Inventory Level: Low,35
+10000000,USA,Forecast Accuracy: < 50%,38
+10000000,USA,Manufactured Goods: < 70%,24
+10000000,USA,Category: Low Value Stable,-8
+10000001,USA,Inventory Level: Low,25
+10000001,USA,Forecast Accuracy: < 50%,28
+10000001,USA,Manufactured Goods: < 70%,14
+10000001,USA,Category: Low Value Stable,-8
+10000002,USA,Inventory Level: Medium,30
+10000002,USA,Forecast Accuracy: 50-80%,4
+10000002,USA,Manufactured Goods: 80%-90%,10
+10000002,USA,Category: High Value Stable,-12
+10000003,USA,Inventory Level: High,-15
+10000003,USA,Forecast Accuracy: 80%-100%,-19
+10000003,USA,Manufactured Goods: 90%-100%,-6
+10000003,USA,Category: Highly Intermittent,10
+10000004,USA,Inventory Level: High,-20
+10000004,USA,Forecast Accuracy: 80%-100%,-6
+10000004,USA,Manufactured Goods: 100%-110%,4
+10000004,USA,Category: High Value Volatile,8

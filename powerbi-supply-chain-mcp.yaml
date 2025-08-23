@@ -1,0 +1,374 @@
+sources:
+    supply-chain-powerbi:
+        kind: sqlite
+        database: "./powerbi_full/data/powerbi_data.db"
+
+tools:
+    # ========== CORE DATABASE OPERATIONS ==========
+    
+    execute_sql:
+        kind: sqlite-sql
+        source: supply-chain-powerbi
+        description: Execute arbitrary SQL statements against the Power BI database. Use this for complex queries, analysis, and data exploration.
+        statement: |
+            -- Replace this with your SQL statement
+            SELECT 'Replace this statement with your SQL';
+
+    list_powerbi_tables:
+        kind: sqlite-sql
+        source: supply-chain-powerbi
+        description: List all Power BI tables with their schema information and row counts
+        statement: |
+            SELECT 
+                name as table_name,
+                type as object_type,
+                sql as create_statement
+            FROM sqlite_master 
+            WHERE type = 'table' 
+            AND name NOT LIKE 'sqlite_%'
+            ORDER BY name;
+
+    powerbi_database_info:
+        kind: sqlite-sql
+        source: supply-chain-powerbi
+        description: Get Power BI database information, extraction metadata, and statistics
+        statement: |
+            SELECT 
+                'database_version' as info_type,
+                sqlite_version() as value
+            UNION ALL
+            SELECT 
+                'database_size_pages' as info_type,
+                CAST(page_count as TEXT) as value
+            FROM pragma_page_count()
+            UNION ALL
+            SELECT 
+                'extraction_date' as info_type,
+                extraction_date as value
+            FROM _extraction_metadata
+            UNION ALL
+            SELECT 
+                'source_pbix_file' as info_type,
+                source_file as value
+            FROM _extraction_metadata
+            UNION ALL
+            SELECT 
+                'total_tables_extracted' as info_type,
+                CAST(total_tables as TEXT) as value
+            FROM _extraction_metadata;
+
+    describe_powerbi_table:
+        kind: sqlite-sql
+        source: supply-chain-powerbi
+        description: Get detailed column information for a specific Power BI table
+        statement: PRAGMA table_info(?);
+        parameters:
+            - name: table_name
+              type: string
+              description: Name of the Power BI table to describe
+
+    # ========== SUPPLY CHAIN SPECIFIC QUERIES ==========
+    
+    get_backorder_analysis:
+        kind: sqlite-sql
+        source: supply-chain-powerbi
+        description: Analyze backorder percentages by region, product type, and other dimensions
+        statement: |
+            SELECT 
+                Region,
+                "Product Type",
+                "Forecast Bias",
+                AVG("Backorder %") as avg_backorder_pct,
+                COUNT(*) as record_count,
+                MIN("Backorder %") as min_backorder,
+                MAX("Backorder %") as max_backorder
+            FROM BackorderPercentage 
+            WHERE Region = COALESCE(?, Region)
+            AND "Product Type" = COALESCE(?, "Product Type")
+            GROUP BY Region, "Product Type", "Forecast Bias"
+            ORDER BY avg_backorder_pct DESC
+            LIMIT ?;
+        parameters:
+            - name: region_filter
+              type: string
+              description: Filter by specific region (optional, use NULL for all regions)
+              required: false
+            - name: product_type_filter
+              type: string
+              description: Filter by specific product type (optional, use NULL for all types)
+              required: false
+            - name: limit
+              type: integer
+              description: Maximum number of results to return
+              default: 100
+
+    get_risk_assessment:
+        kind: sqlite-sql
+        source: supply-chain-powerbi
+        description: Analyze risk scores and backorder risk by location and product
+        statement: |
+            SELECT 
+                Location,
+                "Risk Score",
+                AVG("Backorder Risk") as avg_backorder_risk,
+                COUNT(*) as product_count,
+                COUNT(DISTINCT "Product ID") as unique_products
+            FROM Risk 
+            WHERE Location LIKE ?
+            AND "Backorder Risk" >= ?
+            GROUP BY Location, "Risk Score"
+            ORDER BY avg_backorder_risk DESC
+            LIMIT ?;
+        parameters:
+            - name: location_pattern
+              type: string
+              description: Location pattern to search for (use % for wildcards)
+              default: "%"
+            - name: min_risk
+              type: integer
+              description: Minimum backorder risk threshold
+              default: 0
+            - name: limit
+              type: integer
+              description: Maximum number of results to return
+              default: 50
+
+    get_supply_analytics:
+        kind: sqlite-sql
+        source: supply-chain-powerbi
+        description: Analyze supply chain metrics including manufactured goods percentages and forecast accuracy
+        statement: |
+            SELECT 
+                "Forecast Accuracy",
+                "Forecast Bias",
+                "Demand Type",
+                Plant,
+                AVG("Manufactured Goods %") as avg_manufactured_pct,
+                COUNT(*) as record_count
+            FROM SupplyAnalytics 
+            WHERE "Forecast Accuracy" = COALESCE(?, "Forecast Accuracy")
+            AND Plant = COALESCE(?, Plant)
+            GROUP BY "Forecast Accuracy", "Forecast Bias", "Demand Type", Plant
+            ORDER BY avg_manufactured_pct DESC
+            LIMIT ?;
+        parameters:
+            - name: forecast_accuracy_filter
+              type: string
+              description: Filter by forecast accuracy level (optional)
+              required: false
+            - name: plant_filter
+              type: string
+              description: Filter by specific plant (optional)
+              required: false
+            - name: limit
+              type: integer
+              description: Maximum number of results to return
+              default: 100
+
+    get_explanations_by_risk:
+        kind: sqlite-sql
+        source: supply-chain-powerbi
+        description: Get explanatory factors for risk levels by product and location
+        statement: |
+            SELECT 
+                e.Location,
+                e.Factor,
+                e.Risk,
+                COUNT(*) as factor_count,
+                GROUP_CONCAT(DISTINCT e."Product ID") as affected_products
+            FROM Explanations e
+            WHERE e.Risk >= ?
+            AND e.Location LIKE ?
+            GROUP BY e.Location, e.Factor, e.Risk
+            ORDER BY e.Risk DESC, factor_count DESC
+            LIMIT ?;
+        parameters:
+            - name: min_risk_level
+              type: integer
+              description: Minimum risk level to include
+              default: 50
+            - name: location_pattern
+              type: string
+              description: Location pattern to search for (use % for wildcards)
+              default: "%"
+            - name: limit
+              type: integer
+              description: Maximum number of results to return
+              default: 50
+
+    # ========== CROSS-TABLE ANALYSIS ==========
+    
+    get_integrated_risk_backorder_analysis:
+        kind: sqlite-sql
+        source: supply-chain-powerbi
+        description: Comprehensive analysis combining risk data with backorder percentages
+        statement: |
+            SELECT 
+                bp.Region,
+                bp."Product Type",
+                r.Location,
+                r."Risk Score",
+                AVG(bp."Backorder %") as avg_backorder_pct,
+                AVG(r."Backorder Risk") as avg_backorder_risk,
+                COUNT(*) as matching_records
+            FROM BackorderPercentage bp
+            JOIN Risk r ON bp."Product ID" = r."Product ID"
+            WHERE bp.Region LIKE ?
+            AND r."Risk Score" = COALESCE(?, r."Risk Score")
+            GROUP BY bp.Region, bp."Product Type", r.Location, r."Risk Score"
+            HAVING avg_backorder_pct > ?
+            ORDER BY avg_backorder_pct DESC, avg_backorder_risk DESC
+            LIMIT ?;
+        parameters:
+            - name: region_pattern
+              type: string
+              description: Region pattern to search for (use % for wildcards)
+              default: "%"
+            - name: risk_score_filter
+              type: string
+              description: Filter by specific risk score (optional)
+              required: false
+            - name: min_backorder_threshold
+              type: string
+              description: Minimum backorder percentage threshold
+              default: "0.0"
+            - name: limit
+              type: integer
+              description: Maximum number of results to return
+              default: 50
+
+    # ========== TEMPLATE-BASED DYNAMIC QUERIES ==========
+    
+    count_table_records:
+        kind: sqlite-sql
+        source: supply-chain-powerbi
+        description: Count records in any Power BI table
+        statement: SELECT COUNT(*) as record_count FROM {{.tableName}};
+        templateParameters:
+            - name: tableName
+              type: string
+              description: Name of the Power BI table to count records from
+
+    query_table_with_filter:
+        kind: sqlite-sql
+        source: supply-chain-powerbi
+        description: Query any Power BI table with dynamic column filtering
+        statement: |
+            SELECT * FROM {{.tableName}} 
+            WHERE {{.columnName}} = ?
+            ORDER BY {{.orderBy}} 
+            LIMIT ?;
+        templateParameters:
+            - name: tableName
+              type: string
+              description: Name of the Power BI table to query
+            - name: columnName
+              type: string
+              description: Column name for filtering
+            - name: orderBy
+              type: string
+              description: Column name for ordering results
+        parameters:
+            - name: filter_value
+              type: string
+              description: Value to filter by
+            - name: limit
+              type: integer
+              description: Maximum number of records to return
+              default: 100
+
+    get_table_sample:
+        kind: sqlite-sql
+        source: supply-chain-powerbi
+        description: Get a sample of records from any Power BI table
+        statement: SELECT * FROM {{.tableName}} LIMIT ?;
+        templateParameters:
+            - name: tableName
+              type: string
+              description: Name of the Power BI table to sample
+        parameters:
+            - name: sample_size
+              type: integer
+              description: Number of sample records to return
+              default: 10
+
+    # ========== MONTH/TIME ANALYSIS ==========
+    
+    get_monthly_trends:
+        kind: sqlite-sql
+        source: supply-chain-powerbi
+        description: Analyze trends by month using the Month dimension table
+        statement: |
+            SELECT 
+                m.Month,
+                m.ID as month_id,
+                COUNT(bp."Product ID") as products_tracked,
+                AVG(bp."Backorder %") as avg_backorder_pct
+            FROM Month m
+            LEFT JOIN BackorderPercentage bp ON m.Month = bp.Month
+            GROUP BY m.Month, m.ID
+            ORDER BY m.ID;
+
+    # ========== LOGO/METADATA QUERIES ==========
+    
+    get_powerbi_metadata:
+        kind: sqlite-sql
+        source: supply-chain-powerbi
+        description: Get Power BI report metadata including logos and configuration
+        statement: |
+            SELECT 
+                'extraction_info' as metadata_type,
+                extraction_date,
+                total_tables,
+                total_rows,
+                source_file,
+                extraction_tool
+            FROM _extraction_metadata
+            UNION ALL
+            SELECT 
+                'logo_info' as metadata_type,
+                URL as extraction_date,
+                NULL as total_tables,
+                NULL as total_rows,
+                'Logo URL' as source_file,
+                NULL as extraction_tool
+            FROM Logo;
+
+# ========== TOOLSETS FOR DIFFERENT USE CASES ==========
+
+toolsets:
+    powerbi-basic-analysis:
+        - list_powerbi_tables
+        - powerbi_database_info
+        - describe_powerbi_table
+        - get_table_sample
+        - count_table_records
+
+    supply-chain-insights:
+        - get_backorder_analysis
+        - get_risk_assessment
+        - get_supply_analytics
+        - get_explanations_by_risk
+        - get_integrated_risk_backorder_analysis
+
+    powerbi-advanced-queries:
+        - query_table_with_filter
+        - get_monthly_trends
+        - get_powerbi_metadata
+        - execute_sql
+
+    powerbi-complete-toolkit:
+        - execute_sql
+        - list_powerbi_tables
+        - powerbi_database_info
+        - describe_powerbi_table
+        - get_backorder_analysis
+        - get_risk_assessment
+        - get_supply_analytics
+        - get_explanations_by_risk
+        - get_integrated_risk_backorder_analysis
+        - query_table_with_filter
+        - count_table_records
+        - get_table_sample
+        - get_monthly_trends
+        - get_powerbi_metadata

@@ -1,0 +1,247 @@
+Month,Region,Plant,Product Type,Forecast Bias,Buyer Type,Shipment Destination,Shipment Type,Product ID,Forecast Accuracy,Brand,Backorder %,Distribution Center,Demand Type
+April,West,#0048,Patient Monitoring,Accurate (5% to -5%),,,,,,,0.0658,Distribution Center C,Intermittent
+April,Midwest,#0048,Patient Monitoring,Accurate (5% to -5%),,,,,,,0.055,Distribution Center D,Intermittent
+April,West,#0239,Cardiovascular,Accurate (5% to -5%),,,,,,,0.0317,Distribution Center C,Intermittent
+April,Northeast,#0239,Neurological,Accurate (5% to -5%),,,,,,,0.0329,Distribution Center A,Intermittent
+April,Southwest,#0239,Neurological,Accurate (5% to -5%),,,,,,,0.0457,Distribution Center B,Intermittent
+April,Southwest,#0239,Patient Monitoring,Accurate (5% to -5%),,,,,,,0.0693,Distribution Center B,Intermittent
+April,West,#0239,Patient Monitoring,Accurate (5% to -5%),,,,,,,0.0694,Distribution Center C,Intermittent
+April,Midwest,#0288,Patient Monitoring,Accurate (5% to -5%),,,,,,,0.0406,Distribution Center D,Intermittent
+April,West,#0288,Neurological,Accurate (5% to -5%),,,,,,,0.0543,Distribution Center C,Intermittent
+April,Midwest,#0288,Neurological,Accurate (5% to -5%),,,,,,,0.0691,Distribution Center D,Intermittent
+April,Northeast,#0477,Advanced Surgical,Accurate (5% to -5%),,,,,,,0.0754,Distribution Center A,Intermittent
+April,West,#0477,Neurological,Accurate (5% to -5%),,,,,,,0.0657,Distribution Center C,Intermittent
+April,Midwest,#0477,Patient Monitoring,Accurate (5% to -5%),,,,,,,0.0292,Distribution Center D,Intermittent
+April,West,#0610,Neurological,Accurate (5% to -5%),,,,,,,0.0439,Distribution Center C,Intermittent
+April,West,#0610,Patient Monitoring,Accurate (5% to -5%),,,,,,,0.0507,Distribution Center C,Intermittent
+April,Southwest,#0610,Patient Monitoring,Accurate (5% to -5%),,,,,,,0.0344,Distribution Center B,Intermittent
+April,West,#0689,Patient Monitoring,Accurate (5% to -5%),,,,,,,0.0652,Distribution Center C,Intermittent
+April,Southwest,#0761,Cardiovascular,Accurate (5% to -5%),,,,,,,0.041,Distribution Center B,Intermittent
+April,West,#0761,Cardiovascular,Accurate (5% to -5%),,,,,,,0.0521,Distribution Center C,Intermittent
+April,Midwest,#0761,Neurological,Accurate (5% to -5%),,,,,,,0.0552,Distribution Center D,Intermittent
+April,Southwest,#0761,Neurological,Accurate (5% to -5%),,,,,,,0.0309,Distribution Center B,Intermittent
+April,Northeast,#0761,Neurological,Accurate (5% to -5%),,,,,,,0.0586,Distribution Center A,Intermittent
+April,Northeast,#0761,Patient Monitoring,Accurate (5% to -5%),,,,,,,0.0513,Distribution Center A,Intermittent
+April,Northeast,#0761,Patient Monitoring,Accurate (5% to -5%),,,,,,,0.0547,Distribution Center A,Intermittent
+April,Midwest,#0761,Respiratory,Accurate (5% to -5%),,,,,,,0.0202,Distribution Center D,Intermittent
+December,Midwest,#0288,Patient Monitoring,Accurate (5% to -5%),,,,,,,0.0555,Distribution Center D,Intermittent
+February,Midwest,#0288,Patient Monitoring,Accurate (5% to -5%),,,,,,,0.0809,Distribution Center D,Intermittent
+January,Midwest,#0288,Patient Monitoring,Accurate (5% to -5%),,,,,,,0.0609,Distribution Center D,Intermittent
+June,Southwest,#0048,Patient Monitoring,Accurate (5% to -5%),,,,,,,0.0511,Distribution Center B,Intermittent
+June,Northeast,#0048,Patient Monitoring,Accurate (5% to -5%),,,,,,,0.102428673104522,Distribution Center A,Intermittent
+June,Northeast,#0239,Cardiovascular,Accurate (5% to -5%),,,,,,,0.0012,Distribution Center A,Intermittent
+June,Midwest,#0239,Cardiovascular,Accurate (5% to -5%),,,,,,,0.011,Distribution Center D,Intermittent
+June,West,#0239,Cardiovascular,Accurate (5% to -5%),,,,,,,0.0274035064658264,Distribution Center C,Intermittent
+June,Midwest,#0239,Neurological,Accurate (5% to -5%),,,,,,,0.0,Distribution Center D,Intermittent
+June,West,#0239,Patient Monitoring,Accurate (5% to -5%),,,,,,,0.0552,Distribution Center C,Intermittent
+June,Midwest,#0288,Cardiovascular,Accurate (5% to -5%),,,,,,,0.0001,Distribution Center D,Intermittent
+June,Midwest,#0288,Cardiovascular,Accurate (5% to -5%),,,,,,,0.0001,Distribution Center D,Intermittent
+June,Midwest,#0288,Cardiovascular,Accurate (5% to -5%),,,,,,,0.0024,Distribution Center D,Intermittent
+June,Midwest,#0288,Cardiovascular,Accurate (5% to -5%),,,,,,,0.0014,Distribution Center D,Intermittent
+June,Midwest,#0288,Cardiovascular,Accurate (5% to -5%),,,,,,,0.0024,Distribution Center D,Intermittent
+June,Midwest,#0288,Cardiovascular,Accurate (5% to -5%),,,,,,,0.0014,Distribution Center D,Intermittent
+June,Midwest,#0288,Cardiovascular,Accurate (5% to -5%),,,,,,,0.0024,Distribution Center D,Intermittent
+June,Midwest,#0288,Cardiovascular,Accurate (5% to -5%),,,,,,,0.0014,Distribution Center D,Intermittent
+June,Midwest,#0288,Cardiovascular,Accurate (5% to -5%),,,,,,,0.0024,Distribution Center D,Intermittent
+June,Midwest,#0288,Cardiovascular,Accurate (5% to -5%),,,,,,,0.0014,Distribution Center D,Intermittent
+June,Southwest,#0288,Patient Monitoring,Accurate (5% to -5%),,,,,,,0.0189,Distribution Center B,Intermittent
+June,Midwest,#0288,Patient Monitoring,Accurate (5% to -5%),,,,,,,0.025,Distribution Center D,Intermittent
+June,Midwest,#0288,Patient Monitoring,Accurate (5% to -5%),,,,,,,0.0258,Distribution Center D,Intermittent
+June,Midwest,#0288,Patient Monitoring,Accurate (5% to -5%),,,,,,,0.0369,Distribution Center D,Intermittent
+June,Midwest,#0288,Patient Monitoring,Accurate (5% to -5%),,,,,,,0.0386,Distribution Center D,Intermittent
+June,Midwest,#0288,Patient Monitoring,Accurate (5% to -5%),,,,,,,0.2414,Distribution Center D,Intermittent
+June,Midwest,#0288,Patient Monitoring,Accurate (5% to -5%),,,,,,,0.2414,Distribution Center D,Intermittent
+June,Midwest,#0288,Patient Monitoring,Accurate (5% to -5%),,,,,,,0.2414,Distribution Center D,Intermittent
+June,Midwest,#0288,Patient Monitoring,Accurate (5% to -5%),,,,,,,0.2414,Distribution Center D,Intermittent
+June,Midwest,#0288,Patient Monitoring,Accurate (5% to -5%),,,,,,,0.2414,Distribution Center D,Intermittent
+June,Midwest,#0288,Patient Monitoring,Accurate (5% to -5%),,,,,,,0.2414,Distribution Center D,Intermittent
+June,Midwest,#0288,Patient Monitoring,Accurate (5% to -5%),,,,,,,0.2414,Distribution Center D,Intermittent
+June,Midwest,#0288,Patient Monitoring,Accurate (5% to -5%),,,,,,,0.2414,Distribution Center D,Intermittent
+June,Midwest,#0288,Patient Monitoring,Accurate (5% to -5%),,,,,,,0.2414,Distribution Center D,Intermittent
+June,Midwest,#0288,Patient Monitoring,Accurate (5% to -5%),,,,,,,0.2414,Distribution Center D,Intermittent
+June,Midwest,#0477,Advanced Surgical,Accurate (5% to -5%),,,,,,,0.0001,Distribution Center D,Intermittent
+June,Midwest,#0477,Cardiovascular,Accurate (5% to -5%),,,,,,,0.019,Distribution Center D,Intermittent
+June,Midwest,#0477,Patient Monitoring,Accurate (5% to -5%),,,,,,,0.1165,Distribution Center D,Intermittent
+June,West,#0610,Cardiovascular,Accurate (5% to -5%),,,,,,,0.0296,Distribution Center C,Intermittent
+June,Northeast,#0610,Cardiovascular,Accurate (5% to -5%),,,,,,,0.0626,Distribution Center A,Intermittent
+June,Midwest,#0610,Patient Monitoring,Accurate (5% to -5%),,,,,,,0.0926,Distribution Center D,Intermittent
+June,Midwest,#0689,Patient Monitoring,Accurate (5% to -5%),,,,,,,0.0042,Distribution Center D,Intermittent
+June,Southwest,#0761,Cardiovascular,Accurate (5% to -5%),,,,,,,0.0156,Distribution Center B,Intermittent
+June,West,#0761,Cardiovascular,Accurate (5% to -5%),,,,,,,0.0373,Distribution Center C,Intermittent
+June,Northeast,#0761,Cardiovascular,Accurate (5% to -5%),,,,,,,0.0480861107542577,Distribution Center A,Intermittent
+June,West,#0761,Cardiovascular,Accurate (5% to -5%),,,,,,,0.0765,Distribution Center C,Intermittent
+June,West,#0761,Patient Monitoring,Accurate (5% to -5%),,,,,,,0.0533219926512043,Distribution Center C,Intermittent
+June,West,#0761,Patient Monitoring,Accurate (5% to -5%),,,,,,,0.0673,Distribution Center C,Intermittent
+June,West,#0761,Patient Monitoring,Accurate (5% to -5%),,,,,,,0.0841,Distribution Center C,Intermittent
+June,Southwest,#0761,Respiratory,Accurate (5% to -5%),,,,,,,0.015,Distribution Center B,Intermittent
+March,Midwest,#0288,Patient Monitoring,Accurate (5% to -5%),,,,,,,0.1011,Distribution Center D,Intermittent
+May,Midwest,#0048,Patient Monitoring,Accurate (5% to -5%),,,,,,,0.073,Distribution Center D,Intermittent
+May,Northeast,#0048,Patient Monitoring,Accurate (5% to -5%),,,,,,,0.0449,Distribution Center A,Intermittent
+May,Southwest,#0239,Cardiovascular,Accurate (5% to -5%),,,,,,,0.0294,Distribution Center B,Intermittent
+May,West,#0239,Cardiovascular,Accurate (5% to -5%),,,,,,,0.0307,Distribution Center C,Intermittent
+May,West,#0239,Neurological,Accurate (5% to -5%),,,,,,,0.0244,Distribution Center C,Intermittent
+May,West,#0239,Patient Monitoring,Accurate (5% to -5%),,,,,,,0.0655,Distribution Center C,Intermittent
+May,Midwest,#0239,Patient Monitoring,Accurate (5% to -5%),,,,,,,0.0658,Distribution Center D,Intermittent
+May,Midwest,#0288,Patient Monitoring,Accurate (5% to -5%),,,,,,,0.0606,Distribution Center D,Intermittent
+May,Midwest,#0288,Cardiovascular,Accurate (5% to -5%),,,,,,,0.0277,Distribution Center D,Intermittent
+May,Northeast,#0288,Cardiovascular,Accurate (5% to -5%),,,,,,,0.0406,Distribution Center A,Intermittent
+May,Southwest,#0477,Advanced Surgical,Accurate (5% to -5%),,,,,,,0.0507,Distribution Center B,Intermittent
+May,West,#0477,Cardiovascular,Accurate (5% to -5%),,,,,,,0.0589,Distribution Center C,Intermittent
+May,Northeast,#0477,Patient Monitoring,Accurate (5% to -5%),,,,,,,0.0705,Distribution Center A,Intermittent
+May,Midwest,#0610,Cardiovascular,Accurate (5% to -5%),,,,,,,0.0186,Distribution Center D,Intermittent
+May,West,#0610,Patient Monitoring,Accurate (5% to -5%),,,,,,,0.0332,Distribution Center C,Intermittent
+May,West,#0610,Patient Monitoring,Accurate (5% to -5%),,,,,,,0.0471,Distribution Center C,Intermittent
+May,West,#0689,Patient Monitoring,Accurate (5% to -5%),,,,,,,0.078,Distribution Center C,Intermittent
+May,Northeast,#0761,Cardiovascular,Accurate (5% to -5%),,,,,,,0.0575,Distribution Center A,Intermittent
+May,West,#0761,Cardiovascular,Accurate (5% to -5%),,,,,,,0.0734,Distribution Center C,Intermittent
+May,Southwest,#0761,Cardiovascular,Accurate (5% to -5%),,,,,,,0.0112,Distribution Center B,Intermittent
+May,West,#0761,Cardiovascular,Accurate (5% to -5%),,,,,,,0.0481,Distribution Center C,Intermittent
+May,Midwest,#0761,Cardiovascular,Accurate (5% to -5%),,,,,,,0.0353,Distribution Center D,Intermittent
+May,Southwest,#0761,Patient Monitoring,Accurate (5% to -5%),,,,,,,0.0154,Distribution Center B,Intermittent
+May,Southwest,#0761,Patient Monitoring,Accurate (5% to -5%),,,,,,,0.0694,Distribution Center B,Intermittent
+May,Northeast,#0761,Respiratory,Accurate (5% to -5%),,,,,,,0.0784,Distribution Center A,Intermittent
+November,Midwest,#0288,Patient Monitoring,Accurate (5% to -5%),,,,,,,0.0245,Distribution Center D,Intermittent
+October,Midwest,#0288,Patient Monitoring,Accurate (5% to -5%),,,,,,,0.0706,Distribution Center D,Intermittent
+September,Midwest,#0288,Patient Monitoring,Accurate (5% to -5%),,,,,,,0.0876,Distribution Center D,Intermittent
+April,Northeast,#0048,Patient Monitoring,Moderate over (5% to 20%),,,,,,,0.0499,Distribution Center A,Intermittent
+April,Southwest,#0048,Patient Monitoring,Moderate over (5% to 20%),,,,,,,0.0644,Distribution Center B,Intermittent
+April,Southwest,#0239,Cardiovascular,Moderate over (5% to 20%),,,,,,,0.0379,Distribution Center B,Intermittent
+April,West,#0239,Cardiovascular,Moderate over (5% to 20%),,,,,,,0.0304,Distribution Center C,Intermittent
+April,West,#0239,Neurological,Moderate over (5% to 20%),,,,,,,0.0603,Distribution Center C,Intermittent
+April,West,#0239,Patient Monitoring,Moderate over (5% to 20%),,,,,,,0.0435,Distribution Center C,Intermittent
+April,Midwest,#0239,Patient Monitoring,Moderate over (5% to 20%),,,,,,,0.0403,Distribution Center D,Intermittent
+April,Northeast,#0288,Cardiovascular,Moderate over (5% to 20%),,,,,,,0.0248,Distribution Center A,Intermittent
+April,Southeast,#0288,Patient Monitoring,Moderate over (5% to 20%),,,,,,,0.0224,Distribution Center A,Intermittent
+April,Southwest,#0477,Advanced Surgical,Moderate over (5% to 20%),,,,,,,0.0665,Distribution Center B,Intermittent
+April,West,#0477,Cardiovascular,Moderate over (5% to 20%),,,,,,,0.0691,Distribution Center C,Intermittent
+April,Southwest,#0477,Patient Monitoring,Moderate over (5% to 20%),,,,,,,0.0626,Distribution Center B,Intermittent
+April,West,#0511,Patient Monitoring,Moderate over (5% to 20%),,,,,,,0.0445,Distribution Center C,Intermittent
+April,Midwest,#0610,Cardiovascular,Moderate over (5% to 20%),,,,,,,0.0419,Distribution Center D,Intermittent
+April,Midwest,#0610,Patient Monitoring,Moderate over (5% to 20%),,,,,,,0.0382,Distribution Center D,Intermittent
+April,West,#0610,Patient Monitoring,Moderate over (5% to 20%),,,,,,,0.0314,Distribution Center C,Intermittent
+April,Northeast,#0761,Cardiovascular,Moderate over (5% to 20%),,,,,,,0.0554,Distribution Center A,Intermittent
+April,West,#0761,Cardiovascular,Moderate over (5% to 20%),,,,,,,0.0353,Distribution Center C,Intermittent
+April,Southwest,#0761,Cardiovascular,Moderate over (5% to 20%),,,,,,,0.0325,Distribution Center B,Intermittent
+April,West,#0761,Cardiovascular,Moderate over (5% to 20%),,,,,,,0.065,Distribution Center C,Intermittent
+April,Midwest,#0761,Cardiovascular,Moderate over (5% to 20%),,,,,,,0.0448,Distribution Center D,Intermittent
+April,West,#0761,Patient Monitoring,Moderate over (5% to 20%),,,,,,,0.0656,Distribution Center C,Intermittent
+April,West,#0761,Patient Monitoring,Moderate over (5% to 20%),,,,,,,0.0264,Distribution Center C,Intermittent
+April,Northeast,#0761,Respiratory,Moderate over (5% to 20%),,,,,,,0.0318,Distribution Center A,Intermittent
+June,West,#0048,Patient Monitoring,Moderate over (5% to 20%),,,,,,,0.0194,Distribution Center C,Intermittent
+June,West,#0048,Patient Monitoring,Moderate over (5% to 20%),,,,,,,0.044,Distribution Center C,Intermittent
+June,Northeast,#0239,Cardiovascular,Moderate over (5% to 20%),,,,,,,0.0267,Distribution Center A,Intermittent
+June,West,#0239,Cardiovascular,Moderate over (5% to 20%),,,,,,,0.0367,Distribution Center C,Intermittent
+June,Midwest,#0239,Neurological,Moderate over (5% to 20%),,,,,,,0.0317,Distribution Center D,Intermittent
+June,Southwest,#0239,Patient Monitoring,Moderate over (5% to 20%),,,,,,,0.0226,Distribution Center B,Intermittent
+June,Northeast,#0239,Patient Monitoring,Moderate over (5% to 20%),,,,,,,0.0418,Distribution Center A,Intermittent
+June,West,#0288,Cardiovascular,Moderate over (5% to 20%),,,,,,,0.011,Distribution Center C,Intermittent
+June,West,#0288,Cardiovascular,Moderate over (5% to 20%),,,,,,,0.0304,Distribution Center C,Intermittent
+June,West,#0477,Advanced Surgical,Moderate over (5% to 20%),,,,,,,0.0176,Distribution Center C,Intermittent
+June,Northeast,#0477,Cardiovascular,Moderate over (5% to 20%),,,,,,,0.0116,Distribution Center A,Intermittent
+June,West,#0477,Patient Monitoring,Moderate over (5% to 20%),,,,,,,0.0367,Distribution Center C,Intermittent
+June,Midwest,#0511,Patient Monitoring,Moderate over (5% to 20%),,,,,,,0.0415,Distribution Center D,Intermittent
+June,Southwest,#0610,Cardiovascular,Moderate over (5% to 20%),,,,,,,0.0193,Distribution Center B,Intermittent
+June,Northeast,#0610,Patient Monitoring,Moderate over (5% to 20%),,,,,,,0.0145,Distribution Center A,Intermittent
+June,Southwest,#0610,Patient Monitoring,Moderate over (5% to 20%),,,,,,,0.05,Distribution Center B,Intermittent
+June,West,#0761,Cardiovascular,Moderate over (5% to 20%),,,,,,,0.0162,Distribution Center C,Intermittent
+June,Midwest,#0761,Cardiovascular,Moderate over (5% to 20%),,,,,,,0.0189,Distribution Center D,Intermittent
+June,Southwest,#0761,Cardiovascular,Moderate over (5% to 20%),,,,,,,0.0226,Distribution Center B,Intermittent
+June,West,#0761,Cardiovascular,Moderate over (5% to 20%),,,,,,,0.0239,Distribution Center C,Intermittent
+June,Midwest,#0761,Cardiovascular,Moderate over (5% to 20%),,,,,,,0.0258,Distribution Center D,Intermittent
+June,Midwest,#0761,Patient Monitoring,Moderate over (5% to 20%),,,,,,,0.03,Distribution Center D,Intermittent
+June,Midwest,#0761,Patient Monitoring,Moderate over (5% to 20%),,,,,,,0.0325,Distribution Center D,Intermittent
+June,West,#0761,Respiratory,Moderate over (5% to 20%),,,,,,,0.0267,Distribution Center C,Intermittent
+May,Southwest,#0048,Patient Monitoring,Moderate over (5% to 20%),,,,,,,0.0747,Distribution Center B,Intermittent
+May,West,#0048,Patient Monitoring,Moderate over (5% to 20%),,,,,,,0.0383,Distribution Center C,Intermittent
+May,West,#0239,Cardiovascular,Moderate over (5% to 20%),,,,,,,0.0113,Distribution Center C,Intermittent
+May,Midwest,#0239,Cardiovascular,Moderate over (5% to 20%),,,,,,,0.049,Distribution Center D,Intermittent
+May,West,#0239,Neurological,Moderate over (5% to 20%),,,,,,,0.0287,Distribution Center C,Intermittent
+May,Midwest,#0239,Patient Monitoring,Moderate over (5% to 20%),,,,,,,0.076,Distribution Center D,Intermittent
+May,Northeast,#0239,Patient Monitoring,Moderate over (5% to 20%),,,,,,,0.0661,Distribution Center A,Intermittent
+May,Southwest,#0288,Cardiovascular,Moderate over (5% to 20%),,,,,,,0.0116,Distribution Center B,Intermittent
+May,Southwest,#0288,Patient Monitoring,Moderate over (5% to 20%),,,,,,,0.0796,Distribution Center B,Intermittent
+May,West,#0477,Advanced Surgical,Moderate over (5% to 20%),,,,,,,0.0585,Distribution Center C,Intermittent
+May,Midwest,#0477,Cardiovascular,Moderate over (5% to 20%),,,,,,,0.0488,Distribution Center D,Intermittent
+May,West,#0477,Patient Monitoring,Moderate over (5% to 20%),,,,,,,0.0798,Distribution Center C,Intermittent
+May,West,#0511,Patient Monitoring,Moderate over (5% to 20%),,,,,,,0.0425,Distribution Center C,Intermittent
+May,Northeast,#0610,Cardiovascular,Moderate over (5% to 20%),,,,,,,0.0406,Distribution Center A,Intermittent
+May,Northeast,#0610,Patient Monitoring,Moderate over (5% to 20%),,,,,,,0.0405,Distribution Center A,Intermittent
+May,Midwest,#0610,Patient Monitoring,Moderate over (5% to 20%),,,,,,,0.0777,Distribution Center D,Intermittent
+May,Southwest,#0761,Cardiovascular,Moderate over (5% to 20%),,,,,,,0.0445,Distribution Center B,Intermittent
+May,West,#0761,Cardiovascular,Moderate over (5% to 20%),,,,,,,0.0334,Distribution Center C,Intermittent
+May,West,#0761,Cardiovascular,Moderate over (5% to 20%),,,,,,,0.048,Distribution Center C,Intermittent
+May,West,#0761,Cardiovascular,Moderate over (5% to 20%),,,,,,,0.054,Distribution Center C,Intermittent
+May,Northeast,#0761,Cardiovascular,Moderate over (5% to 20%),,,,,,,0.0496,Distribution Center A,Intermittent
+May,West,#0761,Patient Monitoring,Moderate over (5% to 20%),,,,,,,0.0352,Distribution Center C,Intermittent
+May,West,#0761,Patient Monitoring,Moderate over (5% to 20%),,,,,,,0.0446,Distribution Center C,Intermittent
+May,Southwest,#0761,Respiratory,Moderate over (5% to 20%),,,,,,,0.0172,Distribution Center B,Intermittent
+April,West,#0239,Respiratory,Consistent under (<-20%),,,,,,,0.0541,Distribution Center C,Intermittent
+April,Midwest,#0610,Respiratory,Moderate under (-5% to -20%),,,,,,,0.0386,Distribution Center D,Intermittent
+April,Northeast,#0761,Respiratory,Consistent over (>20%),,,,,,,0.069,Distribution Center A,Intermittent
+June,Northeast,#0239,Patient Monitoring,Consistent under (<-20%),,,,,,,0.1265,Distribution Center A,Intermittent
+June,Southwest,#0610,Patient Monitoring,Moderate under (-5% to -20%),,,,,,,0.0783,Distribution Center B,Intermittent
+June,West,#0761,Patient Monitoring,Consistent over (>20%),,,,,,,0.033,Distribution Center C,Intermittent
+May,Midwest,#0239,Patient Monitoring,Consistent under (<-20%),,,,,,,0.021,Distribution Center D,Intermittent
+May,Northeast,#0610,Patient Monitoring,Moderate under (-5% to -20%),,,,,,,0.0351,Distribution Center A,Intermittent
+May,Southwest,#0761,Patient Monitoring,Consistent over (>20%),,,,,,,0.046,Distribution Center B,Intermittent
+April,Southwest,#0239,Patient Monitoring,Accurate (5% to -5%),,,,,,,0.039,Distribution Center B,Stable (High Price)
+April,West,#0239,Patient Monitoring,Accurate (5% to -5%),,,,,,,0.038,Distribution Center C,Declining
+April,West,#0239,Patient Monitoring,Accurate (5% to -5%),,,,,,,0.0255,Distribution Center C,Volatile (Low Price)
+April,West,#0239,Patient Monitoring,Moderate over (5% to 20%),,,,,,,0.0284,Distribution Center C,Stable (High Price)
+April,Midwest,#0239,Patient Monitoring,Moderate over (5% to 20%),,,,,,,0.0472,Distribution Center D,Declining
+April,Northeast,#0239,Patient Monitoring,Moderate over (5% to 20%),,,,,,,0.0288,Distribution Center A,Volatile (Low Price)
+April,Midwest,#0511,Patient Monitoring,Accurate (5% to -5%),,,,,,Contoso,0.0592,Distribution Center D,Growing
+April,Southwest,#0511,Respiratory,Accurate (5% to -5%),,,,,,,0.0643,Distribution Center B,Stable (Low Price)
+April,West,#0511,Patient Monitoring,Moderate over (5% to 20%),,,,,,,0.0551,Distribution Center C,Stable (Low Price)
+April,Southwest,#0511,Patient Monitoring,Moderate over (5% to 20%),,,,,,Contoso,0.0429,Distribution Center B,Growing
+April,West,#0610,Respiratory,Accurate (5% to -5%),,,,,,,0.0531,Distribution Center C,No Segment
+April,Northeast,#0610,Patient Monitoring,Moderate over (5% to 20%),,,,,,,0.0448,Distribution Center A,No Segment
+April,Northeast,#0761,Patient Monitoring,Accurate (5% to -5%),,,,,,,0.0545,Distribution Center A,Seasonal
+April,West,#0761,Patient Monitoring,Moderate over (5% to 20%),,,,,,,0.0632,Distribution Center C,Seasonal
+April,West,#0918,Respiratory,Accurate (5% to -5%),,,,,,,0.0543,Distribution Center C,Volatile (High Price)
+April,Midwest,#0918,Patient Monitoring,Moderate over (5% to 20%),,,,,,,0.0681,Distribution Center D,Volatile (High Price)
+April,Midwest,#1448,Patient Monitoring,Accurate (5% to -5%),,,,,,,0.0446,Distribution Center D,Cyclical
+April,Southwest,#1448,Patient Monitoring,Moderate over (5% to 20%),,,,,,,0.0273,Distribution Center B,Cyclical
+December,West,#0239,Patient Monitoring,Moderate over (5% to 20%),,,,,,,0.0288,Distribution Center C,Volatile (Low Price)
+February,West,#0610,Patient Monitoring,Moderate over (5% to 20%),,,,,,,0.0448,Distribution Center C,No Segment
+January,West,#0918,Patient Monitoring,Moderate over (5% to 20%),,,,,,,0.0681,Distribution Center C,Volatile (High Price)
+June,West,#0239,Patient Monitoring,Accurate (5% to -5%),,,,,,,0.0199,Distribution Center C,Stable (High Price)
+June,Northeast,#0239,Patient Monitoring,Accurate (5% to -5%),,,,,,,0.0275,Distribution Center A,Volatile (Low Price)
+June,Midwest,#0239,Patient Monitoring,Accurate (5% to -5%),,,,,,,0.0462,Distribution Center D,Declining
+June,Southwest,#0239,Patient Monitoring,Moderate over (5% to 20%),,,,,,,0.0011,Distribution Center B,Declining
+June,Northeast,#0239,Patient Monitoring,Moderate over (5% to 20%),,,,,,,0.0439,Distribution Center A,Stable (High Price)
+June,West,#0239,Patient Monitoring,Moderate over (5% to 20%),,,,,,,0.0571,Distribution Center C,Volatile (Low Price)
+June,West,#0511,Patient Monitoring,Accurate (5% to -5%),,,,,,,0.0145,Distribution Center C,Stable (Low Price)
+June,Southwest,#0511,Patient Monitoring,Accurate (5% to -5%),,,,,,Contoso,0.0158,Distribution Center B,Growing
+June,Northeast,#0511,Patient Monitoring,Moderate over (5% to 20%),,,,,,,0.0019,Distribution Center A,Stable (Low Price)
+June,West,#0511,Patient Monitoring,Moderate over (5% to 20%),,,,,,Contoso,0.0024,Distribution Center C,Growing
+June,Northeast,#0610,Patient Monitoring,Accurate (5% to -5%),,,,,,,0.0124,Distribution Center A,No Segment
+June,West,#0610,Patient Monitoring,Moderate over (5% to 20%),,,,,,,0.0498,Distribution Center C,No Segment
+June,West,#0761,Patient Monitoring,Accurate (5% to -5%),,,,,,,0.0231,Distribution Center C,Seasonal
+June,Midwest,#0761,Patient Monitoring,Moderate over (5% to 20%),,,,,,,0.0467,Distribution Center D,Seasonal
+June,Midwest,#0918,Patient Monitoring,Accurate (5% to -5%),,,,,,,0.0483,Distribution Center D,Volatile (High Price)
+June,Southwest,#0918,Patient Monitoring,Moderate over (5% to 20%),,,,,,,0.057,Distribution Center B,Volatile (High Price)
+June,Southwest,#1448,Patient Monitoring,Accurate (5% to -5%),,,,,,,0.0295,Distribution Center B,Cyclical
+June,West,#1448,Patient Monitoring,Moderate over (5% to 20%),,,,,,,0.0215,Distribution Center C,Cyclical
+March,Midwest,#0511,Patient Monitoring,Moderate over (5% to 20%),,,,,,Contoso,0.0429,Distribution Center D,Growing
+May,West,#0239,Patient Monitoring,Accurate (5% to -5%),,,,,,,0.078,Distribution Center C,Stable (High Price)
+May,West,#0239,Patient Monitoring,Accurate (5% to -5%),,,,,,,0.0387,Distribution Center C,Declining
+May,Midwest,#0239,Patient Monitoring,Accurate (5% to -5%),,,,,,,0.0261,Distribution Center D,Volatile (Low Price)
+May,Midwest,#0239,Patient Monitoring,Moderate over (5% to 20%),,,,,,,0.0284,Distribution Center D,Stable (High Price)
+May,Northeast,#0239,Patient Monitoring,Moderate over (5% to 20%),,,,,,,0.0288,Distribution Center A,Declining
+May,Southwest,#0239,Patient Monitoring,Moderate over (5% to 20%),,,,,,,0.0734,Distribution Center B,Volatile (Low Price)
+May,West,#0511,Patient Monitoring,Accurate (5% to -5%),,,,,,,0.0653,Distribution Center C,Stable (Low Price)
+May,Northeast,#0511,Patient Monitoring,Accurate (5% to -5%),,,,,,Contoso,0.0508,Distribution Center A,Growing
+May,Midwest,#0511,Patient Monitoring,Moderate over (5% to 20%),,,,,,,0.0751,Distribution Center D,Stable (Low Price)
+May,West,#0511,Patient Monitoring,Moderate over (5% to 20%),,,,,,Contoso,0.0348,Distribution Center C,Growing
+May,Midwest,#0610,Patient Monitoring,Accurate (5% to -5%),,,,,,,0.0426,Distribution Center D,No Segment
+May,Southwest,#0610,Patient Monitoring,Moderate over (5% to 20%),,,,,,,0.0328,Distribution Center B,No Segment
+May,Southwest,#0761,Patient Monitoring,Accurate (5% to -5%),,,,,,,0.0601,Distribution Center B,Seasonal
+May,West,#0761,Patient Monitoring,Moderate over (5% to 20%),,,,,,,0.0395,Distribution Center C,Seasonal
+May,West,#0918,Patient Monitoring,Accurate (5% to -5%),,,,,,,0.0569,Distribution Center C,Volatile (High Price)
+May,Northeast,#0918,Patient Monitoring,Moderate over (5% to 20%),,,,,,,0.0516,Distribution Center A,Volatile (High Price)
+May,Northeast,#1448,Patient Monitoring,Accurate (5% to -5%),,,,,,,0.0397,Distribution Center A,Cyclical
+May,West,#1448,Patient Monitoring,Moderate over (5% to 20%),,,,,,,0.0794,Distribution Center C,Cyclical
+November,West,#0239,Patient Monitoring,Moderate over (5% to 20%),,,,,,,0.0472,Distribution Center C,Declining
+October,Southwest,#0239,Patient Monitoring,Moderate over (5% to 20%),,,,,,,0.0284,Distribution Center B,Stable (High Price)
+September,Northeast,#0761,Patient Monitoring,Moderate over (5% to 20%),,,,,,,0.0632,Distribution Center A,Seasonal
