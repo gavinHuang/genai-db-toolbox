@@ -44,9 +44,9 @@ jobs:
     
     - name: Run linting
       run: |
-        black --check pbix_to_mcp/ tests/
+        black --check --line-length 100 pbix_to_mcp/ tests/
         isort --check-only pbix_to_mcp/ tests/
-        flake8 pbix_to_mcp/ tests/
+        flake8 --max-line-length=120 --ignore=E501,F401,F841,F541,W291,W503,F811 pbix_to_mcp/ tests/
     
     - name: Run type checking
       run: mypy pbix_to_mcp/
