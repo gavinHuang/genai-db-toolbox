@@ -39,6 +39,12 @@ The tool converts this into a comprehensive MCP server with dozens of specialize
 
 *Generated MCP tools that provide programmatic access to all Power BI data and analytics*
 
+Once configured, you can interact with your Power BI data through natural language in any MCP-compatible chat interface:
+
+![MCP in Chat Usage](images/mcp-in-chat.png)
+
+*Example of using the MCP tools in a chat interface to query Power BI data naturally*
+
 ### Installation
 
 ```bash
