@@ -27,6 +27,18 @@ This tool do three things:
 
 ## Quick Start
 
+Here's an example of what this tool can extract from a Power BI report:
+
+![Power BI Supply Chain Dashboard](images/powerbi-supplier-chain.png)
+
+*Original Power BI dashboard with complex visualizations and data relationships*
+
+The tool converts this into a comprehensive MCP server with dozens of specialized tools:
+
+![MCP Tools Generated](images/mcp-tools.png)
+
+*Generated MCP tools that provide programmatic access to all Power BI data and analytics*
+
 ### Installation
 
 ```bash
@@ -58,8 +70,10 @@ pbix-to-mcp report.pbix -o my_output --config-name my_mcp.yaml
 
 2. **Start the MCP server**:
    ```bash
-   ./toolbox --tools-file report_mcp_config.yaml
+   ./toolbox --tools-file supply_chain_mcp.yaml
    ```
+   
+   > **Important**: Ensure the database path in the YAML config is correct for your environment. If running from a different directory, you may need to update the database path to be absolute or correctly relative.
 
 3. **Connect from your MCP client**:
    ```json

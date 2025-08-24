@@ -79,8 +79,12 @@ class MCPConfigGenerator:
     
     def _generate_sources(self, extraction_results: Dict[str, Any]) -> Dict[str, Any]:
         """Generate data source definitions."""
-        # Get the database path relative to config
-        db_path = "./data/powerbi_data.db"
+        # Use the absolute path to the database for better reliability
+        db_path = str(self.output_dir / "data" / "powerbi_data.db")
+        
+        # Convert Windows paths to Unix-style for better cross-platform compatibility
+        if "\\" in db_path:
+            db_path = db_path.replace("\\", "/")
         
         source_name = self._get_source_name(extraction_results)
         
@@ -552,7 +556,7 @@ class MCPConfigGenerator:
                     },
                     {
                         "name": "min_complexity",
-                        "type": "number", 
+                        "type": "float", 
                         "description": "Minimum complexity score",
                         "default": 0.0
                     },
